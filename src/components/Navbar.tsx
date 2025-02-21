@@ -33,8 +33,11 @@ const Navbar = () => {
               <Link href="/" onClick={() => setPhoneMenu(false)} className="font-semibold text-gray-500 duration-300 hover:text-gray-900">
                 Home
               </Link>
-              <Link href="/blog" onClick={() => setPhoneMenu(false)} className="font-semibold text-gray-500 duration-300 hover:text-gray-900">
-                Blog
+              <Link href="/#services" onClick={() => setPhoneMenu(false)} className="font-semibold text-gray-500 duration-300 hover:text-gray-900">
+                Services
+              </Link>
+              <Link href="/properties" onClick={() => setPhoneMenu(false)} className="font-semibold text-gray-500 duration-300 hover:text-gray-900">
+                Find a property
               </Link>
               <Link href="/#faq" onClick={() => setPhoneMenu(false)} className="font-semibold text-gray-500 duration-300 hover:text-gray-900">
                 FAQ

@@ -2,7 +2,7 @@ import FAQ from "@/components/sections/FAQ";
 import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import SocialProf from "@/components/sections/socialProf";
-import Listings from "@/components/sections/listings";
+import Properties from "@/components/sections/properties";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
 
       <SocialProf />
 
-      <Listings />
+      <Properties />
 
       <FAQ />
     </main>

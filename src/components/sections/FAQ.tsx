@@ -22,7 +22,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section>
+    <section id='faq'>
       <h3 className="mt-5 text-4xl font-semibold text-center text-slate-900">Frequently Asked Questions</h3>
 
       <div className="flex items-center justify-center h-full overflow-x-hidden" id="faq">

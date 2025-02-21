@@ -5,7 +5,7 @@ import { FaFileContract } from "react-icons/fa";
 
 const about = () => {
   return (
-    <section className="relative h-full py-8 my-8 mx-5 ">
+    <section id="services" className="relative h-full py-8 my-8 mx-5">
       <div className="absolute bg-[#F6F8FA] h-4/6 w-full rounded-xl"></div>
       <div className="container relative">
         <div className="absolute -top-8 right-5 md:right-20 h-16 w-16">
@@ -46,6 +46,10 @@ const about = () => {
             <h3 className="font-bold text-lg text-slate-900 mt-5 text-center">Property Management</h3>
             <p className="text-sm text-center">Leave the hassle to us. We take care of maintenance, rent collection, and tenant relations for your investment properties.</p>
           </div>
+        </div>
+
+        <div className="-z-10 absolute -bottom-8 left-5 md:left-16 h-16 w-16">
+          <div className="absolute inset-0 h-full w-full bg-transparent bg-[radial-gradient(#acadd3_2px,transparent_2px)] [background-size:16px_16px]"></div>
         </div>
       </div>
     </section>

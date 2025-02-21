@@ -4,13 +4,13 @@ import Home2 from "@/assets/home-2.jpg";
 import Home3 from "@/assets/home-3.jpg";
 import Home4 from "@/assets/home-4.jpg";
 import Image from "next/image";
+import { IoBedSharp, IoLocationSharp } from 'react-icons/io5';
+import { PiBathtubFill } from 'react-icons/pi';
+import { FaArrowRight } from 'react-icons/fa6';
 
-import { FaArrowRight } from "react-icons/fa";
-import { IoBedSharp, IoLocationSharp } from "react-icons/io5";
-import { PiBathtubFill } from "react-icons/pi";
+const page = () => {
 
-const listings = () => {
-  const listings = [
+  const properties = [
     {
       id: 1,
       image: Home1,
@@ -45,14 +45,11 @@ const listings = () => {
     },
   ];
 
-  return (
-    <section className="h-full container py-10">
-      <div className="pt-6 pb-3">
-        <h2 className="text-slate-900 text-3xl font-bold">Our recent listing</h2>
-      </div>
 
+  return (
+    <section className='min-h-screen container py-10'>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
-        {listings.map(listing => (
+        {properties.map(listing => (
           <div key={listing.id} className="border rounded-md flex flex-col">
             <Image src={listing.image} alt={"home image 1"} className="rounded-md p-1 cursor-pointer" />
 
@@ -88,4 +85,4 @@ const listings = () => {
   )
 }
 
-export default listings
+export default page
