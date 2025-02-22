@@ -44,7 +44,7 @@ const Navbar = () => {
               </Link>
             </nav>
 
-            <div>
+            {/* <div>
               <Drawer>
                 <DrawerTrigger asChild className='duration-300 cursor-pointer '>
                   <Languages className="w-5 h-5 text-gray-600 hover:text-headingText" />
@@ -70,7 +70,7 @@ const Navbar = () => {
                   </div>
                 </DrawerContent>
               </Drawer>
-            </div>
+            </div> */}
 
             <div className="md:hidden" onClick={() => setPhoneMenu(true)}>
               <RiMenu3Line size={23} />
