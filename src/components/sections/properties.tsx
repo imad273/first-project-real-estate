@@ -1,13 +1,15 @@
+"use client"
+
 import React from 'react'
 import Home1 from "@/assets/home-1.jpg";
 import Home2 from "@/assets/home-2.jpg";
 import Home3 from "@/assets/home-3.jpg";
 import Home4 from "@/assets/home-4.jpg";
 import Image from "next/image";
-
 import { FaArrowRight } from "react-icons/fa";
 import { IoBedSharp, IoLocationSharp } from "react-icons/io5";
 import { PiBathtubFill } from "react-icons/pi";
+import { motion } from 'framer-motion';
 
 const properties = () => {
   const properties = [
@@ -46,7 +48,11 @@ const properties = () => {
   ];
 
   return (
-    <section id="properties" className="h-full container py-10">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      id="properties" className="h-full container py-10">
       <div className="pt-6 pb-3">
         <h2 className="text-slate-900 text-3xl font-bold">Our recent listing</h2>
       </div>
@@ -84,7 +90,7 @@ const properties = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   )
 }
 

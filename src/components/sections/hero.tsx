@@ -1,11 +1,20 @@
+"use client"
+
 import React from 'react'
 import heroImage from "@/assets/hero.png";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 
 const hero = () => {
   return (
-    <section className="bg-gradient-to-tr from-[#C8E2E9] to-[#F7DCBE]">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.2 }}
+
+      className="bg-gradient-to-tr from-[#C8E2E9] to-[#F7DCBE]">
       <section className="container h-full md:h-[90vh]">
         <div className="md:flex justify-between items-center h-full">
           <div className="md:w-7/12">
@@ -20,7 +29,7 @@ const hero = () => {
           </div>
         </div>
       </section>
-    </section>
+    </motion.section>
   )
 }
 

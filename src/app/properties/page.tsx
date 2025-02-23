@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Home1 from "@/assets/home-1.jpg";
 import Home2 from "@/assets/home-2.jpg";
@@ -7,6 +9,7 @@ import Image from "next/image";
 import { IoBedSharp, IoLocationSharp } from 'react-icons/io5';
 import { PiBathtubFill } from 'react-icons/pi';
 import { FaArrowRight } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 
 const page = () => {
 
@@ -45,9 +48,14 @@ const page = () => {
     },
   ];
 
-
   return (
-    <section className='min-h-screen container py-10'>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.2 }}
+
+      className='min-h-screen container py-10'>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-5">
         {properties.map(listing => (
           <div key={listing.id} className="border rounded-md flex flex-col">
@@ -81,7 +89,7 @@ const page = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   )
 }
 

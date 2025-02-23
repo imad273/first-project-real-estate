@@ -1,11 +1,20 @@
+"use client"
+
 import React from 'react'
 import { SiHomeassistant } from "react-icons/si";
 import { MdAddHome, MdSell } from "react-icons/md";
 import { FaFileContract } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 const about = () => {
   return (
-    <section id="services" className="relative h-full py-8 my-8 mx-5">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+
+      id="services"
+      className="relative h-full py-8 my-8 mx-5">
       <div className="absolute bg-[#F6F8FA] h-4/6 w-full rounded-xl"></div>
       <div className="container relative">
         <div className="absolute -top-8 right-5 md:right-20 h-16 w-16">
@@ -52,7 +61,7 @@ const about = () => {
           <div className="absolute inset-0 h-full w-full bg-transparent bg-[radial-gradient(#acadd3_2px,transparent_2px)] [background-size:16px_16px]"></div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
